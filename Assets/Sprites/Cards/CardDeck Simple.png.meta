@@ -1,0 +1,1469 @@
+fileFormatVersion: 2
+guid: 3d703f2c0ab45e0418170836d4df623e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7094333873250323917
+    second: CardDeck Simple_0
+  - first:
+      213: -5314729400876061530
+    second: CardDeck Simple_1
+  - first:
+      213: -7608777202925034629
+    second: CardDeck Simple_2
+  - first:
+      213: -1389089613096075377
+    second: CardDeck Simple_3
+  - first:
+      213: -9106526394470980996
+    second: CardDeck Simple_4
+  - first:
+      213: 6297146662573943739
+    second: CardDeck Simple_5
+  - first:
+      213: -2104817072180796410
+    second: CardDeck Simple_6
+  - first:
+      213: -4559080744649835701
+    second: CardDeck Simple_7
+  - first:
+      213: 474038586033007617
+    second: CardDeck Simple_8
+  - first:
+      213: -7322999175390810405
+    second: CardDeck Simple_9
+  - first:
+      213: 3248795913585003972
+    second: CardDeck Simple_10
+  - first:
+      213: 1664208473366656331
+    second: CardDeck Simple_11
+  - first:
+      213: -4438278243348853161
+    second: CardDeck Simple_12
+  - first:
+      213: 8724065402772330742
+    second: CardDeck Simple_13
+  - first:
+      213: 3413334557172304271
+    second: CardDeck Simple_14
+  - first:
+      213: 6180729062740352891
+    second: CardDeck Simple_15
+  - first:
+      213: -7627840595444917176
+    second: CardDeck Simple_16
+  - first:
+      213: 3541148322860816097
+    second: CardDeck Simple_17
+  - first:
+      213: -903156697767166224
+    second: CardDeck Simple_18
+  - first:
+      213: -2384339980751960276
+    second: CardDeck Simple_19
+  - first:
+      213: 2333772112758977041
+    second: CardDeck Simple_20
+  - first:
+      213: -811996543364938941
+    second: CardDeck Simple_21
+  - first:
+      213: 4985906015106634306
+    second: CardDeck Simple_22
+  - first:
+      213: -978833943484218027
+    second: CardDeck Simple_23
+  - first:
+      213: 5679552475371103439
+    second: CardDeck Simple_24
+  - first:
+      213: 7265957732264471966
+    second: CardDeck Simple_25
+  - first:
+      213: -7510907685594042907
+    second: CardDeck Simple_26
+  - first:
+      213: -2491222250491583302
+    second: CardDeck Simple_27
+  - first:
+      213: 50986714131961524
+    second: CardDeck Simple_28
+  - first:
+      213: -5367823654617683914
+    second: CardDeck Simple_29
+  - first:
+      213: -5985580801245005864
+    second: CardDeck Simple_30
+  - first:
+      213: -517681460639675514
+    second: CardDeck Simple_31
+  - first:
+      213: 3170835768550464156
+    second: CardDeck Simple_32
+  - first:
+      213: 4595083098289219569
+    second: CardDeck Simple_33
+  - first:
+      213: 4962670511828345653
+    second: CardDeck Simple_34
+  - first:
+      213: 3452574548337229977
+    second: CardDeck Simple_35
+  - first:
+      213: 4149160599221157870
+    second: CardDeck Simple_36
+  - first:
+      213: -4486731970953945598
+    second: CardDeck Simple_37
+  - first:
+      213: -4712633734435263873
+    second: CardDeck Simple_38
+  - first:
+      213: -7882166658829713325
+    second: CardDeck Simple_39
+  - first:
+      213: -1941300017392876005
+    second: CardDeck Simple_40
+  - first:
+      213: -220325166786801318
+    second: CardDeck Simple_41
+  - first:
+      213: -1553909063250356216
+    second: CardDeck Simple_42
+  - first:
+      213: 7313401692642114261
+    second: CardDeck Simple_43
+  - first:
+      213: 6362533915797728536
+    second: CardDeck Simple_44
+  - first:
+      213: -4664028450612083404
+    second: CardDeck Simple_45
+  - first:
+      213: -2203437831258276838
+    second: CardDeck Simple_46
+  - first:
+      213: -7234067842651221188
+    second: CardDeck Simple_47
+  - first:
+      213: 3118872451865373246
+    second: CardDeck Simple_48
+  - first:
+      213: 3877979040469588705
+    second: CardDeck Simple_49
+  - first:
+      213: -2258624285587003452
+    second: CardDeck Simple_50
+  - first:
+      213: -5359320923193859726
+    second: CardDeck Simple_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CardDeck Simple_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332b4eefdecdb8d90800000000000000
+      internalID: -7094333873250323917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ac257fb4c94e36b0800000000000000
+      internalID: -5314729400876061530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73209c6271386690800000000000000
+      internalID: -7608777202925034629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f393a4b56f8bce0800000000000000
+      internalID: -1389089613096075377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72a6df1e7e1f9180800000000000000
+      internalID: -9106526394470980996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbba141a685f36750800000000000000
+      internalID: 6297146662573943739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6046c7f46003ac2e0800000000000000
+      internalID: -2104817072180796410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_7
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bb2d0c734eab0c0800000000000000
+      internalID: -4559080744649835701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_8
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c635a159f149600800000000000000
+      internalID: 474038586033007617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_9
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde2a548c0b7f5a90800000000000000
+      internalID: -7322999175390810405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_10
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd89f8abaa061d20800000000000000
+      internalID: 3248795913585003972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_11
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1168
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45f6370ac4781710800000000000000
+      internalID: 1664208473366656331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_12
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1168
+        width: 252
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ec8d2e3711862c0800000000000000
+      internalID: -4438278243348853161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f81581034b121970800000000000000
+      internalID: 8724065402772330742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8902d3f1b99e5f20800000000000000
+      internalID: 3413334557172304271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_15
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f529de55c56c550800000000000000
+      internalID: 6180729062740352891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_16
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c93397467742690800000000000000
+      internalID: -7627840595444917176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_17
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6d61943afa42130800000000000000
+      internalID: 3541148322860816097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_18
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0feb21db4c75773f0800000000000000
+      internalID: -903156697767166224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_19
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2784879b6f19eed0800000000000000
+      internalID: -2384339980751960276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_20
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11236b72f59336020800000000000000
+      internalID: 2333772112758977041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_21
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34343e922753bb4f0800000000000000
+      internalID: -811996543364938941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_22
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2421ae1ba1f713540800000000000000
+      internalID: 4985906015106634306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_23
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5554788e6bb7a62f0800000000000000
+      internalID: -978833943484218027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_24
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 778
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc46fa182e2d1de40800000000000000
+      internalID: 5679552475371103439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_25
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 778
+        width: 252
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d60a09f0ed5d460800000000000000
+      internalID: 7265957732264471966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed6a632145e3c790800000000000000
+      internalID: -7510907685594042907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_27
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab466eeef866d6dd0800000000000000
+      internalID: -2491222250491583302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_28
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b69918752425b000800000000000000
+      internalID: 50986714131961524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_29
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638e29973d8a185b0800000000000000
+      internalID: -5367823654617683914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_30
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7b46769f1feeca0800000000000000
+      internalID: -5985580801245005864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_31
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b44cf4473d0d8f0800000000000000
+      internalID: -517681460639675514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_32
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a9d89e452110c20800000000000000
+      internalID: 3170835768550464156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_33
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f72eea6bb305cf30800000000000000
+      internalID: 4595083098289219569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_34
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533a5d28982fed440800000000000000
+      internalID: 4962670511828345653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_35
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990023a52420aef20800000000000000
+      internalID: 3452574548337229977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_36
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefbf90f497c49930800000000000000
+      internalID: 4149160599221157870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_37
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 388
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ed6ec4b0debb1c0800000000000000
+      internalID: -4486731970953945598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_38
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 388
+        width: 252
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7aa67e469c599eb0800000000000000
+      internalID: -4712633734435263873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35007007f2bec9290800000000000000
+      internalID: -7882166658829713325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1686dc6bed1f05e0800000000000000
+      internalID: -1941300017392876005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_41
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51189a9d6f31fcf0800000000000000
+      internalID: -220325166786801318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_42
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808d3bf90f76f6ae0800000000000000
+      internalID: -1553909063250356216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_43
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da7ca5671c6e7560800000000000000
+      internalID: 7313401692642114261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_44
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81daf72e2e24c4850800000000000000
+      internalID: 6362533915797728536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_45
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43583f2d5da064fb0800000000000000
+      internalID: -4664028450612083404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_46
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c713f77f0db61e0800000000000000
+      internalID: -2203437831258276838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_47
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3392b5ff9d6b9b90800000000000000
+      internalID: -7234067842651221188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_48
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3aef2178f5784b20800000000000000
+      internalID: 3118872451865373246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_49
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea9991146951d530800000000000000
+      internalID: 3877979040469588705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_50
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 0
+        width: 253
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c72480dd21c7a0e0800000000000000
+      internalID: -2258624285587003452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardDeck Simple_51
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 0
+        width: 252
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27126b7e30edf95b0800000000000000
+      internalID: -5359320923193859726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CardDeck Simple_0: -7094333873250323917
+      CardDeck Simple_1: -5314729400876061530
+      CardDeck Simple_10: 3248795913585003972
+      CardDeck Simple_11: 1664208473366656331
+      CardDeck Simple_12: -4438278243348853161
+      CardDeck Simple_13: 8724065402772330742
+      CardDeck Simple_14: 3413334557172304271
+      CardDeck Simple_15: 6180729062740352891
+      CardDeck Simple_16: -7627840595444917176
+      CardDeck Simple_17: 3541148322860816097
+      CardDeck Simple_18: -903156697767166224
+      CardDeck Simple_19: -2384339980751960276
+      CardDeck Simple_2: -7608777202925034629
+      CardDeck Simple_20: 2333772112758977041
+      CardDeck Simple_21: -811996543364938941
+      CardDeck Simple_22: 4985906015106634306
+      CardDeck Simple_23: -978833943484218027
+      CardDeck Simple_24: 5679552475371103439
+      CardDeck Simple_25: 7265957732264471966
+      CardDeck Simple_26: -7510907685594042907
+      CardDeck Simple_27: -2491222250491583302
+      CardDeck Simple_28: 50986714131961524
+      CardDeck Simple_29: -5367823654617683914
+      CardDeck Simple_3: -1389089613096075377
+      CardDeck Simple_30: -5985580801245005864
+      CardDeck Simple_31: -517681460639675514
+      CardDeck Simple_32: 3170835768550464156
+      CardDeck Simple_33: 4595083098289219569
+      CardDeck Simple_34: 4962670511828345653
+      CardDeck Simple_35: 3452574548337229977
+      CardDeck Simple_36: 4149160599221157870
+      CardDeck Simple_37: -4486731970953945598
+      CardDeck Simple_38: -4712633734435263873
+      CardDeck Simple_39: -7882166658829713325
+      CardDeck Simple_4: -9106526394470980996
+      CardDeck Simple_40: -1941300017392876005
+      CardDeck Simple_41: -220325166786801318
+      CardDeck Simple_42: -1553909063250356216
+      CardDeck Simple_43: 7313401692642114261
+      CardDeck Simple_44: 6362533915797728536
+      CardDeck Simple_45: -4664028450612083404
+      CardDeck Simple_46: -2203437831258276838
+      CardDeck Simple_47: -7234067842651221188
+      CardDeck Simple_48: 3118872451865373246
+      CardDeck Simple_49: 3877979040469588705
+      CardDeck Simple_5: 6297146662573943739
+      CardDeck Simple_50: -2258624285587003452
+      CardDeck Simple_51: -5359320923193859726
+      CardDeck Simple_6: -2104817072180796410
+      CardDeck Simple_7: -4559080744649835701
+      CardDeck Simple_8: 474038586033007617
+      CardDeck Simple_9: -7322999175390810405
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
