@@ -1453,7 +1453,18 @@ MonoBehaviour:
   cardScript: {fileID: 1498518265}
   deckScript: {fileID: 1242075368}
   handValue: 0
-  hand: []
+  hand:
+  - {fileID: 1498518262}
+  - {fileID: 1689466400}
+  - {fileID: 391989904}
+  - {fileID: 1654218412}
+  - {fileID: 83840599}
+  - {fileID: 35200067}
+  - {fileID: 1313776015}
+  - {fileID: 233164350}
+  - {fileID: 1132580055}
+  - {fileID: 2129079235}
+  - {fileID: 1278808666}
   cardIndex: 0
 --- !u!1 &364077833
 GameObject:
@@ -2016,8 +2027,8 @@ MonoBehaviour:
   hitBtn: {fileID: 988823148}
   standBtn: {fileID: 1504421572}
   betBtn: {fileID: 1600100896}
-  playerScript: {fileID: 0}
-  dealerScript: {fileID: 0}
+  playerScript: {fileID: 358385193}
+  dealerScript: {fileID: 441662488}
   scoreText: {fileID: 1439748886}
   dealerScoreText: {fileID: 166014157}
   betsText: {fileID: 8720939}

@@ -1,5 +1,8 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine; 
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +33,12 @@ public class GameManager : MonoBehaviour
 
   void Start()
   {
+   // GameManager.DealClicked()(Assets / Scripts / GameManager.cs.:51
+
+    
+    
+
+
     // Add on click listeners to the buttons
     //dealBtn.onClick.AddListener(()  => DealClicked());
     //hitBtn.onClick.AddListener(()   => HitClicked());
@@ -46,29 +55,32 @@ public class GameManager : MonoBehaviour
   {
     //reset round, hide text, prep for new hand
     playerScript.ResetHand();
-    
+    Debug.Log(101);
+
     //dealerScript = playerScript, can maybe cause an failure, check this !!!
-    dealerScript.ResetHand();
+    //dealerScript.ResetHand();
+    Debug.Log(102);
 
     // Hide dealer last score at start of deal
     mainText.gameObject.SetActive(false); //hide the last Text, you win, you lose, etc.
     GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle();
+    Debug.Log(103);
+
 
     // Update the scores displayed
     playerScript.StartHand();   //deal 1st card player
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show player 1st card value
+    Debug.Log(playerScript.handValue.ToString());
+
 
     dealerScript.StartHand();   //deal 1st card dealer
     dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
-    Debug.Log("DealClicked() +5");
-   // Debug.Log(dealerScript.handValue);
-    return;
-
-
+    Debug.Log(dealerScript.handValue.ToString());
 
     // enable do hide one of the dealers cards
     hideCard.GetComponent<Renderer>().enabled = true;
-
+    Debug.Log(106);
+    
     // Adjust buttons visibility
     dealBtn.gameObject.SetActive(false);  //hide deal button
     hitBtn.gameObject.SetActive(true);    //make sure it is true
@@ -80,13 +92,12 @@ public class GameManager : MonoBehaviour
     playerScript.AdjustMoney(-20);
     cashText.text ="€" +playerScript.GetMoney().ToString();
   }
+
   private void HitClicked()
+
   {
-
     Debug.Log("HitClicked -01");
-    return;
-
-
+    //return;
     // Check that there is still room on the table
     if (playerScript.cardIndex <= 10)
     {

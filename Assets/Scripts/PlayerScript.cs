@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -23,18 +24,22 @@ public class PlayerScript : MonoBehaviour
   List<CardScript> aceList = new List<CardScript>();
 
   public void StartHand()
-  {
+  {      
     GetCard();  //1st card for player
-    //GetCard();  //2nd card for player
+    GetCard();  //2nd card for player
   }
 
   // Add a hand to the player/dealer's hand
   public int GetCard()
   {
+    //Debug.Log(hand[cardIndex]);
+    //return(44444);
+
+
+
     // Get a card, use deal card to assign sprite and value to card on table
     int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent<CardScript>());
-
-    // Show card on game screen
+// Show card on game screen
     hand[cardIndex].GetComponent<Renderer>().enabled = true;
 
     // Add card value to running total of the hand
@@ -86,6 +91,7 @@ public class PlayerScript : MonoBehaviour
   }
 
   // Hides all cards, resets the needed variables
+ 
   public void ResetHand()
   {
     for (int i = 0; i < hand.Length; i++)
