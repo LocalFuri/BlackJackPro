@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine; 
+using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +11,9 @@ public class GameManager : MonoBehaviour
   public Button betBtn;
   
   private int standClicks = 0;
+  private float cardDelaySnd = 0.3f;
+
+  public int cardIndex = 0;
 
   // Access the player and dealer's script
   public PlayerScript playerScript;
@@ -25,7 +26,8 @@ public class GameManager : MonoBehaviour
   public Text cashText;
   public Text mainText;
   public Text standBtnText;
-    
+  public AudioSource card1Deal;
+
   // Card hiding dealer's 2nd card
   public GameObject hideCard;
   // How much is bet
@@ -33,12 +35,6 @@ public class GameManager : MonoBehaviour
 
   void Start()
   {
-   // GameManager.DealClicked()(Assets / Scripts / GameManager.cs.:51
-
-    
-    
-
-
     // Add on click listeners to the buttons
     //dealBtn.onClick.AddListener(()  => DealClicked());
     //hitBtn.onClick.AddListener(()   => HitClicked());
@@ -51,36 +47,33 @@ public class GameManager : MonoBehaviour
     standBtn.onClick.AddListener(StandClicked);
     betBtn.  onClick.AddListener(BetClicked);
   }
-  private void DealClicked()
+  private void DealClicked() //mark1
   {
-    //reset round, hide text, prep for new hand
     playerScript.ResetHand();
-    Debug.Log(101);
-
-    //dealerScript = playerScript, can maybe cause an failure, check this !!!
-    //dealerScript.ResetHand();
-    Debug.Log(102);
+    dealerScript.ResetHand();
 
     // Hide dealer last score at start of deal
-    mainText.gameObject.SetActive(false); //hide the last Text, you win, you lose, etc.
-    GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle();
-    Debug.Log(103);
+    mainText.gameObject.SetActive(false); //hide the last Text, you win, you lose, etc.  MANDATORY!
 
+    GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle(); //shuffle deck
 
-    // Update the scores displayed
-    playerScript.StartHand();   //deal 1st card player
+    //Player 2 cards begin ------------------------------------------------------------------------
+    card1Deal.Play();
+    playerScript.StartHand();
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show player 1st card value
-    Debug.Log(playerScript.handValue.ToString());
+    StartCoroutine(PlayerDealCardDelay());
+    //Player 2 cards end ------------------------------------------------------------------------
 
-
-    dealerScript.StartHand();   //deal 1st card dealer
-    dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
-    Debug.Log(dealerScript.handValue.ToString());
+    //Dealer 2 cards begin ------------------------------------------------------------------------
+    card1Deal.Play();
+    dealerScript.StartHand();
+    scoreText.text = "Hand: " + dealerScript.handValue.ToString(); //show player 1st card value
+    StartCoroutine(DealerCardDelay());
+    //dealer 2 cards end ------------------------------------------------------------------------
 
     // enable do hide one of the dealers cards
-    hideCard.GetComponent<Renderer>().enabled = true;
-    Debug.Log(106);
-    
+    //hideCard.GetComponent<Renderer>().enabled = false; //dunno how it works
+
     // Adjust buttons visibility
     dealBtn.gameObject.SetActive(false);  //hide deal button
     hitBtn.gameObject.SetActive(true);    //make sure it is true
@@ -88,16 +81,35 @@ public class GameManager : MonoBehaviour
 
     // Set standard pot size
     pot = 40;
-    betsText.text ="€" + pot.ToString();
+    betsText.text ="€ " + pot.ToString();
     playerScript.AdjustMoney(-20);
-    cashText.text ="€" +playerScript.GetMoney().ToString();
+    cashText.text ="€ " +playerScript.GetMoney().ToString();
   }
 
-  private void HitClicked()
-
+  private IEnumerator PlayerDealCardDelay()
   {
-    Debug.Log("HitClicked -01");
-    //return;
+    // Deal 2 card/s to Player
+    for (ulong i = 0; i < 1; i++)
+    {
+      yield return new WaitForSeconds(cardDelaySnd + 0.2f); // you can extend length +0.2f)
+      playerScript.StartHand();
+      scoreText.text = "Hand: " + playerScript.handValue.ToString();
+      card1Deal.Play();
+    }
+  }
+  private IEnumerator DealerCardDelay()
+  {
+    // Deal 2 card/s to Dealer
+    for (ulong i = 0; i <1; i++)
+    {
+      yield return new WaitForSeconds(cardDelaySnd +0.2f); // you can extend length +2f)
+      dealerScript.StartHand();
+      dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
+      card1Deal.Play();
+  }
+}
+  private void HitClicked()
+  {
     // Check that there is still room on the table
     if (playerScript.cardIndex <= 10)
     {
@@ -109,19 +121,19 @@ public class GameManager : MonoBehaviour
   private void StandClicked()
   {
     standClicks++;
-    if (standClicks > 1) RoundOver();
+    if (standClicks > 0) RoundOver();
      HitDealer();
-    standBtnText.text = "Call";
+    //standBtnText.text = "Call";
   }
 
   //HitDealer begin *****************************************************************************************
   private void HitDealer()
   {
-    while (dealerScript.handValue < 16 && dealerScript.cardIndex < 10)
+    while (dealerScript.handValue < 17 && dealerScript.cardIndex  < 10)
     {
       dealerScript.GetCard();
       dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
-      if (dealerScript.handValue > 20) RoundOver ();
+      if (dealerScript.handValue > 21) RoundOver ();
     } 
   }  
 
@@ -135,25 +147,22 @@ public class GameManager : MonoBehaviour
     bool dealer21   = dealerScript.handValue == 21;
 
     //if stand has been clicked less than twice, no 21s or busts, quit function
-    if(standClicks < 2 && !playerBust && !dealerBust && !player21 && !dealer21) return;
+    //if(standClicks < 2 && !playerBust && !dealerBust && !player21 && !dealer21) return;
     bool roundOver = true;
 
-    //all bust, bets returned
-    if (playerBust && dealerBust)
+    if (playerBust) //>21 mark3
     {
-      mainText.text = "All Bust, Bets returned"; //k
-      playerScript.AdjustMoney(pot / 2); //k  
+      mainText.text = "Player busted";
     }
-    //if player busts, dealer didnt, or dealer has more points, Dealer wins
-    else if (playerBust || (!dealerBust && playerScript.handValue > dealerScript.handValue))
+    else if (dealerBust)  //>21 
     {
-      mainText.text = "Dealer wins";
+      mainText.text = "Player wins, dealer busted";
     }
 
     //if dealer busts, player didnt, or player has more points, Player wins
-    else if (dealerBust || playerScript.handValue > dealerScript.handValue)
+    else if (playerScript.handValue > dealerScript.handValue && (dealerScript.handValue != 21))  
     {
-      mainText.text = "You win";
+      mainText.text = "You win again";
       playerScript.AdjustMoney(pot);
     }
     // check for tie, return bets
@@ -164,7 +173,7 @@ public class GameManager : MonoBehaviour
     }
     else
     {
-      roundOver = false;
+      roundOver = true;
     }
 
     //Set ui up for next move / hand / turn
@@ -176,7 +185,7 @@ public class GameManager : MonoBehaviour
       mainText.gameObject.       SetActive(true);
       dealerScoreText.gameObject.SetActive(true);
       hideCard.GetComponent<Renderer>().enabled=false;
-      cashText.text = "€" +playerScript.GetMoney().ToString();
+      cashText.text = "€ " +playerScript.GetMoney().ToString();
       standClicks = 0;
     }
   }
@@ -186,9 +195,9 @@ public class GameManager : MonoBehaviour
     Text newBet = betBtn.GetComponentInChildren(typeof(Text)) as Text;
     int intBet = int.Parse(newBet.text.ToString().Remove(0,1));
     playerScript.AdjustMoney(-intBet);
-    cashText.text="€" +playerScript.GetMoney().ToString();
+    cashText.text="€ " +playerScript.GetMoney().ToString();
     pot += (intBet * 2);
-    betsText.text = "€" + pot.ToString();
+    betsText.text = "€ " + pot.ToString();
   }
 }
 

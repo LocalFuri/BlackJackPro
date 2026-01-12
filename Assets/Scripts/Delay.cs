@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Delay : MonoBehaviour
 {
+  /*
   void Start()
   {
     StartCoroutine(CallWithDelay());
@@ -12,7 +13,7 @@ public class Delay : MonoBehaviour
   IEnumerator CallWithDelay()
   {
     yield return new WaitForSeconds(10f);
-    Debug.Log("Called after delay");
-  }
 
+  }
+  */
 }

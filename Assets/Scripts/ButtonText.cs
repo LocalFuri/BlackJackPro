@@ -15,7 +15,7 @@ public class ButtonText : MonoBehaviour
     {
       int rndNumber = Random.Range(51, 53);
       Textfield.text = rndNumber.ToString();
-      Debug.Log(rndNumber) ;
+
 
       //int j = Mathf.FloorToInt(Random.Range(0.0f, 1.0f) * cardSprites.Length - 1) + 1;
     }

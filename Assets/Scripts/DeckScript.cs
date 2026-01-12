@@ -40,7 +40,7 @@ public class DeckScript : MonoBehaviour
 
       Sprite face = cardSprites[i];
       cardSprites[i] = cardSprites[j];
-      cardSprites[i] = cardSprites[j];
+
       cardSprites[j] = face;
       //check if tuples work
 

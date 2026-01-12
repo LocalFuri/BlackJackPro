@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 8530039}
   - component: {fileID: 8530038}
   m_Layer: 0
-  m_Name: Hit7
+  m_Name: Hit7D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 35200069}
   - component: {fileID: 35200070}
   m_Layer: 0
-  m_Name: Hit4
+  m_Name: Hit4P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 83840602}
   - component: {fileID: 83840601}
   m_Layer: 0
-  m_Name: Hit3
+  m_Name: Hit3P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -959,7 +959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550, y: -24.95346}
+  m_AnchoredPosition: {x: -439, y: -24.95346}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133577971
@@ -1038,7 +1038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: 428}
+  m_AnchoredPosition: {x: 130, y: 471}
   m_SizeDelta: {x: 367.18, y: 71.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166014157
@@ -1095,7 +1095,7 @@ GameObject:
   - component: {fileID: 233164352}
   - component: {fileID: 233164353}
   m_Layer: 0
-  m_Name: Hit6
+  m_Name: Hit6P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1726,7 +1726,7 @@ GameObject:
   - component: {fileID: 391989907}
   - component: {fileID: 391989906}
   m_Layer: 0
-  m_Name: Hit1
+  m_Name: Hit1P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1877,17 +1877,17 @@ MonoBehaviour:
   deckScript: {fileID: 1242075368}
   handValue: 0
   hand:
-  - {fileID: 1498518262}
-  - {fileID: 1689466400}
-  - {fileID: 391989904}
-  - {fileID: 1654218412}
-  - {fileID: 83840599}
-  - {fileID: 35200067}
-  - {fileID: 1313776015}
-  - {fileID: 233164350}
-  - {fileID: 1132580055}
-  - {fileID: 2129079235}
-  - {fileID: 1278808666}
+  - {fileID: 1608374163}
+  - {fileID: 1937846965}
+  - {fileID: 1869960581}
+  - {fileID: 1090854980}
+  - {fileID: 1428622357}
+  - {fileID: 1157062007}
+  - {fileID: 801125314}
+  - {fileID: 1039476853}
+  - {fileID: 8530036}
+  - {fileID: 1893951482}
+  - {fileID: 1736354610}
   cardIndex: 0
 --- !u!1 &467110390
 GameObject:
@@ -2027,6 +2027,7 @@ MonoBehaviour:
   hitBtn: {fileID: 988823148}
   standBtn: {fileID: 1504421572}
   betBtn: {fileID: 1600100896}
+  cardIndex: 0
   playerScript: {fileID: 358385193}
   dealerScript: {fileID: 441662488}
   scoreText: {fileID: 1439748886}
@@ -2035,6 +2036,7 @@ MonoBehaviour:
   cashText: {fileID: 377288368}
   mainText: {fileID: 133577971}
   standBtnText: {fileID: 344490453}
+  card1Deal: {fileID: 10610183}
   hideCard: {fileID: 1061918003}
 --- !u!1 &600653180
 GameObject:
@@ -2138,7 +2140,7 @@ GameObject:
   - component: {fileID: 801125317}
   - component: {fileID: 801125316}
   m_Layer: 0
-  m_Name: Hit5
+  m_Name: Hit5D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2558,7 +2560,7 @@ GameObject:
   - component: {fileID: 1039476855}
   - component: {fileID: 1039476856}
   m_Layer: 0
-  m_Name: Hit6
+  m_Name: Hit6D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2748,7 +2750,7 @@ Transform:
   m_GameObject: {fileID: 1061918003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.92, y: 2.26, z: 0}
+  m_LocalPosition: {x: -3.225, y: 2.93, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2841,7 +2843,7 @@ GameObject:
   - component: {fileID: 1090854982}
   - component: {fileID: 1090854983}
   m_Layer: 0
-  m_Name: Hit2
+  m_Name: Hit2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2945,7 +2947,7 @@ GameObject:
   - component: {fileID: 1132580058}
   - component: {fileID: 1132580057}
   m_Layer: 0
-  m_Name: Hit7
+  m_Name: Hit7P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3049,7 +3051,7 @@ GameObject:
   - component: {fileID: 1157062009}
   - component: {fileID: 1157062010}
   m_Layer: 0
-  m_Name: Hit4
+  m_Name: Hit4D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3310,7 +3312,7 @@ GameObject:
   - component: {fileID: 1278808668}
   - component: {fileID: 1278808669}
   m_Layer: 0
-  m_Name: Hit9
+  m_Name: Hit9P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3414,7 +3416,7 @@ GameObject:
   - component: {fileID: 1313776018}
   - component: {fileID: 1313776017}
   m_Layer: 0
-  m_Name: Hit5
+  m_Name: Hit5P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3597,7 +3599,7 @@ GameObject:
   - component: {fileID: 1428622360}
   - component: {fileID: 1428622359}
   m_Layer: 0
-  m_Name: Hit3
+  m_Name: Hit3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3855,7 +3857,7 @@ GameObject:
   - component: {fileID: 1498518263}
   - component: {fileID: 1498518265}
   m_Layer: 0
-  m_Name: Card1
+  m_Name: Card1P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4317,7 +4319,7 @@ GameObject:
   - component: {fileID: 1608374165}
   - component: {fileID: 1608374166}
   m_Layer: 0
-  m_Name: Card1
+  m_Name: Card1D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4550,7 +4552,7 @@ GameObject:
   - component: {fileID: 1654218414}
   - component: {fileID: 1654218415}
   m_Layer: 0
-  m_Name: Hit2
+  m_Name: Hit2P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4756,7 +4758,7 @@ GameObject:
   - component: {fileID: 1689466401}
   - component: {fileID: 1689466403}
   m_Layer: 0
-  m_Name: Card2
+  m_Name: CardP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4860,7 +4862,7 @@ GameObject:
   - component: {fileID: 1736354612}
   - component: {fileID: 1736354613}
   m_Layer: 0
-  m_Name: Hit9
+  m_Name: Hit9D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5054,7 +5056,7 @@ GameObject:
   - component: {fileID: 1869960584}
   - component: {fileID: 1869960583}
   m_Layer: 0
-  m_Name: Hit1
+  m_Name: Hit1D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5158,7 +5160,7 @@ GameObject:
   - component: {fileID: 1893951484}
   - component: {fileID: 1893951485}
   m_Layer: 0
-  m_Name: Hit8
+  m_Name: Hit8D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5373,7 +5375,7 @@ GameObject:
   - component: {fileID: 1937846968}
   - component: {fileID: 1937846967}
   m_Layer: 0
-  m_Name: Card2
+  m_Name: Card2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5624,7 +5626,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052541178}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -5726,7 +5728,7 @@ GameObject:
   - component: {fileID: 2129079237}
   - component: {fileID: 2129079238}
   m_Layer: 0
-  m_Name: Hit8
+  m_Name: Hit8P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5829,8 +5831,8 @@ SceneRoots:
   - {fileID: 1684627027}
   - {fileID: 1913693002}
   - {fileID: 358385192}
-  - {fileID: 441662487}
   - {fileID: 1061918006}
+  - {fileID: 441662487}
   - {fileID: 380867314}
   - {fileID: 263850673}
   - {fileID: 10610184}

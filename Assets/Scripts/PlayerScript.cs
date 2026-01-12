@@ -23,23 +23,19 @@ public class PlayerScript : MonoBehaviour
   // Tracking aces for 1 to 11 conversions
   List<CardScript> aceList = new List<CardScript>();
 
-  public void StartHand()
+  public void StartHand() //mark2
   {      
-    GetCard();  //1st card for player
-    GetCard();  //2nd card for player
+    GetCard();  //1st card for player and dealer
+    //GetCard();  //2nd card for player and dealer
   }
 
   // Add a hand to the player/dealer's hand
   public int GetCard()
   {
-    //Debug.Log(hand[cardIndex]);
-    //return(44444);
-
-
-
     // Get a card, use deal card to assign sprite and value to card on table
+    //int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent<CardScript>());
     int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent<CardScript>());
-// Show card on game screen
+    // Show card on game screen
     hand[cardIndex].GetComponent<Renderer>().enabled = true;
 
     // Add card value to running total of the hand
@@ -53,7 +49,8 @@ public class PlayerScript : MonoBehaviour
     
     //Check if we should use an 11 instead of a 1
     AceCheck();
-    cardIndex++;
+    cardIndex++ ;
+    Debug.Log(cardIndex);
     return handValue;
   }
 
@@ -94,6 +91,8 @@ public class PlayerScript : MonoBehaviour
  
   public void ResetHand()
   {
+    //UnityEditor.EditorApplication.isPlaying = false;
+    //return;
     for (int i = 0; i < hand.Length; i++)
     {
      hand[i].GetComponent<CardScript>().ResetCard();
