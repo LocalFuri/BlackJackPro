@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -93,12 +94,14 @@ public class PlayerScript : MonoBehaviour
   {
     //UnityEditor.EditorApplication.isPlaying = false;
     //return;
-    for (int i = 0; i < hand.Length; i++)
+    for (int i = 0; i < hand.Length; i++) //=11
     {
-     hand[i].GetComponent<CardScript>().ResetCard();
+     //hand[i].GetComponent<CardScript>().ResetCard(); //what good for????????
      
-     //if false you will not see any card!
-      hand[i].GetComponent<Renderer>().enabled = true; //will show all cards: Card1 to Hit9
+      //if false you will not see any card!
+      hand[i].GetComponent<Renderer>().enabled = false; //will hide: Card1 to Hit9 =11 cards
+      //mark5
+
     }
     cardIndex = 0;
     handValue = 0;

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
   public Button betBtn;
   
   private int standClicks = 0;
-  private float cardDelaySnd = 0.3f;
+  private float cardDelaySnd = 0.227f; //audacity =0,227 got to adjust todo
 
   public int cardIndex = 0;
 
@@ -32,47 +32,42 @@ public class GameManager : MonoBehaviour
   public GameObject hideCard;
   // How much is bet
   int pot = 0;
+  private ulong i = 0;
 
-  void Start()
+  void Start() //mark1
   {
-    // Add on click listeners to the buttons
-    //dealBtn.onClick.AddListener(()  => DealClicked());
-    //hitBtn.onClick.AddListener(()   => HitClicked());
-    //standBtn.onClick.AddListener(() => StandClicked());
-    //betBtn.onClick.AddListener(()   => BetClicked());
+    Debug.Log(101);
 
-    //KI recommended, since we do not pass parameters
+    playerScript.ResetHand();
+    dealerScript.ResetHand();
+
+    Debug.Log(102);
+    return;
+
     dealBtn. onClick.AddListener(DealClicked);
     hitBtn.  onClick.AddListener(HitClicked);
     standBtn.onClick.AddListener(StandClicked);
     betBtn.  onClick.AddListener(BetClicked);
   }
-  private void DealClicked() //mark1
+  private void DealClicked() //mark2
   {
-    playerScript.ResetHand();
-    dealerScript.ResetHand();
+   
 
     // Hide dealer last score at start of deal
     mainText.gameObject.SetActive(false); //hide the last Text, you win, you lose, etc.  MANDATORY!
+    mainText.gameObject.SetActive(true); //hide the last Text, you win, you lose, etc.  MANDATORY!
 
-    GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle(); //shuffle deck
+    //GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle(); //shuffle deck
 
-    //Player 2 cards begin ------------------------------------------------------------------------
+    //Player 1 cards begin ------------------------------------------------------------------------
     card1Deal.Play();
     playerScript.StartHand();
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show player 1st card value
-    StartCoroutine(PlayerDealCardDelay());
-    //Player 2 cards end ------------------------------------------------------------------------
-
-    //Dealer 2 cards begin ------------------------------------------------------------------------
-    card1Deal.Play();
-    dealerScript.StartHand();
-    scoreText.text = "Hand: " + dealerScript.handValue.ToString(); //show player 1st card value
-    StartCoroutine(DealerCardDelay());
-    //dealer 2 cards end ------------------------------------------------------------------------
+    StartCoroutine(CardDelay());
+    //Player 1 cards end ------------------------------------------------------------------------
 
     // enable do hide one of the dealers cards
-    //hideCard.GetComponent<Renderer>().enabled = false; //dunno how it works
+    hideCard.GetComponent<Renderer>().enabled = false; //dunno how it works
 
     // Adjust buttons visibility
     dealBtn.gameObject.SetActive(false);  //hide deal button
@@ -86,28 +81,28 @@ public class GameManager : MonoBehaviour
     cashText.text ="€ " +playerScript.GetMoney().ToString();
   }
 
-  private IEnumerator PlayerDealCardDelay()
+  private IEnumerator CardDelay() //it only works this way
   {
     // Deal 2 card/s to Player
     for (ulong i = 0; i < 1; i++)
     {
-      yield return new WaitForSeconds(cardDelaySnd + 0.2f); // you can extend length +0.2f)
+      yield return new WaitForSeconds(cardDelaySnd +0.0f); // you can extend length +0.2f)
+      dealerScript.StartHand();
+      dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString(); //show player 1st card value
+      card1Deal.Play();
+
+      yield return new WaitForSeconds(cardDelaySnd + 0.0f); // you can extend length +0.2f)
       playerScript.StartHand();
-      scoreText.text = "Hand: " + playerScript.handValue.ToString();
+      scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show player 1st card value
+      card1Deal.Play();
+
+      yield return new WaitForSeconds(cardDelaySnd + 0.0f); // you can extend length +0.2f)
+      dealerScript.StartHand();
+      dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString(); //show player 1st card value
       card1Deal.Play();
     }
   }
-  private IEnumerator DealerCardDelay()
-  {
-    // Deal 2 card/s to Dealer
-    for (ulong i = 0; i <1; i++)
-    {
-      yield return new WaitForSeconds(cardDelaySnd +0.2f); // you can extend length +2f)
-      dealerScript.StartHand();
-      dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
-      card1Deal.Play();
-  }
-}
+
   private void HitClicked()
   {
     // Check that there is still room on the table
@@ -198,6 +193,11 @@ public class GameManager : MonoBehaviour
     cashText.text="€ " +playerScript.GetMoney().ToString();
     pot += (intBet * 2);
     betsText.text = "€ " + pot.ToString();
+  }
+
+  private void HideCards()
+  {
+    Debug.Log("HideCards");
   }
 }
 
