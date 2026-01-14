@@ -293,7 +293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Bets: $ 20'
+  m_Text: 'Bets: '
 --- !u!222 &8720940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -959,7 +959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -439, y: -24.95346}
+  m_AnchoredPosition: {x: -256.2, y: -24.95346}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133577971
@@ -1038,7 +1038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: 471}
+  m_AnchoredPosition: {x: 130, y: 419}
   m_SizeDelta: {x: 367.18, y: 71.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166014157
@@ -1074,7 +1074,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Dealer Hand: ??'
+  m_Text: 'Dealer Hand: '
 --- !u!222 &166014158
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1083,6 +1083,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166014155}
   m_CullTransparentMesh: 1
+--- !u!1 &226633132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226633134}
+  - component: {fileID: 226633133}
+  m_Layer: 0
+  m_Name: LoseSnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &226633133
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226633132}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 75af00bcedb334d41aae07772a87a843, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &226633134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226633132}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.30408, y: 1.19192, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &233164350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,7 +1744,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: $ 1000
+  m_Text: "\u20AC 1000"
 --- !u!222 &377288369
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2027,6 +2156,7 @@ MonoBehaviour:
   hitBtn: {fileID: 988823148}
   standBtn: {fileID: 1504421572}
   betBtn: {fileID: 1600100896}
+  playerBust: 0
   cardIndex: 0
   playerScript: {fileID: 358385193}
   dealerScript: {fileID: 441662488}
@@ -2036,7 +2166,8 @@ MonoBehaviour:
   cashText: {fileID: 377288368}
   mainText: {fileID: 133577971}
   standBtnText: {fileID: 344490453}
-  card1Deal: {fileID: 10610183}
+  card1DealSnd: {fileID: 10610183}
+  loseSnd: {fileID: 226633133}
   hideCard: {fileID: 1061918003}
 --- !u!1 &600653180
 GameObject:
@@ -2750,7 +2881,7 @@ Transform:
   m_GameObject: {fileID: 1061918003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.225, y: 2.93, z: 0}
+  m_LocalPosition: {x: -3.28, y: 2.286, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3228,7 +3359,7 @@ Transform:
   m_GameObject: {fileID: 1242075365}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.28, y: 1.05, z: 0}
+  m_LocalPosition: {x: -5.28, y: 1.05, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3761,7 +3892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Hand: ??'
+  m_Text: 'Hand: '
 --- !u!222 &1439748887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3930,7 +4061,7 @@ Transform:
   m_GameObject: {fileID: 1498518262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.78, y: -1.25, z: 0}
+  m_LocalPosition: {x: -3.78, y: -1.3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4222,7 +4353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -469, y: -379}
+  m_AnchoredPosition: {x: -588, y: -362}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600100896
@@ -4334,7 +4465,7 @@ Transform:
   m_GameObject: {fileID: 1608374163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.73, y: 1.71, z: 0}
+  m_LocalPosition: {x: -3.78, y: 1.71, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4758,7 +4889,7 @@ GameObject:
   - component: {fileID: 1689466401}
   - component: {fileID: 1689466403}
   m_Layer: 0
-  m_Name: CardP
+  m_Name: Card2P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4831,7 +4962,7 @@ Transform:
   m_GameObject: {fileID: 1689466400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.27536, y: -1.3, z: 0}
+  m_LocalPosition: {x: -2.425, y: -1.3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5390,7 +5521,7 @@ Transform:
   m_GameObject: {fileID: 1937846965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1, y: 1.71, z: 0}
+  m_LocalPosition: {x: -2.425, y: 1.71, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5836,3 +5967,4 @@ SceneRoots:
   - {fileID: 380867314}
   - {fileID: 263850673}
   - {fileID: 10610184}
+  - {fileID: 226633134}

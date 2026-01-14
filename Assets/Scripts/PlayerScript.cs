@@ -51,7 +51,6 @@ public class PlayerScript : MonoBehaviour
     //Check if we should use an 11 instead of a 1
     AceCheck();
     cardIndex++ ;
-    Debug.Log(cardIndex);
     return handValue;
   }
 
@@ -92,6 +91,7 @@ public class PlayerScript : MonoBehaviour
  
   public void ResetHand()
   {
+    
     //UnityEditor.EditorApplication.isPlaying = false;
     //return;
     for (int i = 0; i < hand.Length; i++) //=11
