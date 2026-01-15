@@ -7,9 +7,6 @@ public class HoverImageChange : MonoBehaviour, IPointerEnterHandler, IPointerExi
   public Sprite normalSprite;
   public Sprite hoverSprite;
   private Image image;
-  public AudioSource audioSource;
-  public AudioClip quitSound;
-
 
   void Awake()
   {
@@ -19,10 +16,11 @@ public class HoverImageChange : MonoBehaviour, IPointerEnterHandler, IPointerExi
   public void OnPointerEnter(PointerEventData eventData)
   {
     image.sprite = hoverSprite;
-    GetComponent<AudioSource>().Play();
+    // GetComponent<AudioSource>().Play();
   }
 
   public void OnPointerExit(PointerEventData eventData)
-  { image.sprite = normalSprite;
+  { 
+    image.sprite = normalSprite;
   }
 }

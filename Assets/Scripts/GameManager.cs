@@ -53,23 +53,23 @@ public class GameManager : MonoBehaviour
     //shuffle deck activate later
     //GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle(); 
 
-   dealDone = true; //2 cards dealt 
-  //Player 1 cards begin ------------------------------------------------------------------------
-  card1DealSnd.Play();
+    dealDone = true; //2 cards dealt 
+    //Player 1 cards begin ------------------------------------------------------------------------
+    card1DealSnd.Play();
     playerScript.StartHand();
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show player 1st card value
     StartCoroutine(CardDelay());
     //Player 1 cards end ------------------------------------------------------------------------
 
     // enable do hide one of the dealers cards
-    hideCard.GetComponent<Renderer>().enabled = false; //dunno how it works
+    //hideCard.GetComponent<Renderer>().enabled = false; //dunno how it works
 
     // Adjust buttons visibility
     dealBtn.gameObject.SetActive(false);  //hide deal button
     hitBtn.gameObject.SetActive(true);    //make sure it is true
     standBtn.gameObject.SetActive(true);  //make sure it is true
 
-        // Set standard pot size
+    // Set standard pot size
     pot = 40;
     betsText.text ="€ " + pot.ToString();
     playerScript.AdjustMoney(-20);
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
 
   private IEnumerator CardDelay() //it only works this way
   {
-    // Deal 2 card/s to Player
+   // Deal 2 card/s to Player
     for (ulong i = 0; i < 1; i++)
     {
       yield return new WaitForSeconds(cardDelaySnd +0.0f);  // you can extend length +0.2f)
@@ -98,12 +98,14 @@ public class GameManager : MonoBehaviour
       card1DealSnd.Play();
     }
   }
-
   public void HitClicked()
   {
+    Debug.Log(101);
+
     card1DealSnd.Play();
     playerScript.StartHand();
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show players next card
+    Debug.Log(102);
 
     if (playerScript.handValue > 21)  //player busted
     {
@@ -114,6 +116,7 @@ public class GameManager : MonoBehaviour
   }
   private void StandClicked()
   {
+    Debug.Log(900999999999);
     standClicks++;
     if (standClicks > 0) RoundOver();
      HitDealer();
@@ -123,6 +126,9 @@ public class GameManager : MonoBehaviour
   //HitDealer begin *****************************************************************************************
   private void HitDealer()
   {
+    Debug.Log(901);
+    UnityEditor.EditorApplication.isPlaying = false;
+
     while (dealerScript.handValue < 17 && dealerScript.cardIndex  < 10)
     {
       dealerScript.GetCard();
