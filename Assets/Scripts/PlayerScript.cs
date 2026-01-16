@@ -34,7 +34,6 @@ public class PlayerScript : MonoBehaviour
   public int GetCard()
   {
     // Get a card, use deal card to assign sprite and value to card on table
-    //int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent<CardScript>());
     int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent<CardScript>());
     // Show card on game screen
     hand[cardIndex].GetComponent<Renderer>().enabled = true;
@@ -51,6 +50,8 @@ public class PlayerScript : MonoBehaviour
     //Check if we should use an 11 instead of a 1
     AceCheck();
     cardIndex++ ;
+
+    Debug.Log(handValue);
     return handValue;
   }
 
@@ -74,6 +75,7 @@ public class PlayerScript : MonoBehaviour
       }
     }
   }
+
 
   // Add or subtract from money, for bets
   public void AdjustMoney(int amount)

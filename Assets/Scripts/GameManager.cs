@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,13 +12,19 @@ public class GameManager : MonoBehaviour
   public Button standBtn;
   public Button betBtn;
 
-  public bool playerBust = false;
+  //public const string goldColor  = "#FFD700"; //Standard Gold RGB: 255, 215, 0)
+  public static readonly Color32 gold = new Color32(255, 215, 0, 255);
 
+  public bool playerBust = false;
   private int standClicks = 0;
   public int cardIndex = 0;
   private float cardDelaySnd = 0.227f; //audacity =0,227 got to adjust todo
   private bool dealDone = false;
-  
+
+  private string tieText    = "Push, Bets returned!";
+  private string loseText   = "You Lose!";
+  private string winText    = "You Win, Again";
+  private string bustedText = "You Busted!";
 
   // Access the player and dealer's script
   public PlayerScript playerScript;
@@ -29,7 +37,7 @@ public class GameManager : MonoBehaviour
   public Text cashText;
   public Text mainText;
   public Text standBtnText;
-  public AudioSource card1DealSnd, loseSnd;
+  public AudioSource card1DealSnd, loseSnd, tieSnd, harpupSnd;
 
   // Card hiding dealer's 2nd card
   public GameObject hideCard;
@@ -100,12 +108,9 @@ public class GameManager : MonoBehaviour
   }
   public void HitClicked()
   {
-    Debug.Log(101);
-
     card1DealSnd.Play();
     playerScript.StartHand();
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show players next card
-    Debug.Log(102);
 
     if (playerScript.handValue > 21)  //player busted
     {
@@ -116,9 +121,10 @@ public class GameManager : MonoBehaviour
   }
   private void StandClicked()
   {
-    Debug.Log(900999999999);
-    standClicks++;
-    if (standClicks > 0) RoundOver();
+//    Debug.Log(301);
+    
+    //standClicks++; //what good for ????????????????
+    //if (standClicks > 0) RoundOver();
      HitDealer();
     //standBtnText.text = "Call";
   }
@@ -126,15 +132,57 @@ public class GameManager : MonoBehaviour
   //HitDealer begin *****************************************************************************************
   private void HitDealer()
   {
-    Debug.Log(901);
-    UnityEditor.EditorApplication.isPlaying = false;
+    long i = 0;
+    for ( i = 0; i < 12; i++)
 
-    while (dealerScript.handValue < 17 && dealerScript.cardIndex  < 10)
+    //while (dealerScript.handValue < 17)
     {
       dealerScript.GetCard();
       dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
-      if (dealerScript.handValue > 21) RoundOver ();
-    } 
+
+      dealerScript.handValue = dealerScript.handValue + 20; //use for testing
+
+      Debug.Log(dealerScript.handValue+ 100);
+
+
+      //1. it is a tie begin-------------------------------------------------------------------------------
+      if (dealerScript.handValue == playerScript.handValue) //a tie
+      {
+        tieSnd.Play();
+        mainText.enabled = true;
+        mainText.color = new Color(255, 215, 0);  //gold #FFD700
+        mainText.text = tieText;                  // "Push, Bets returned";
+        playerScript.AdjustMoney(+20);
+        cashText.text = "€ " + playerScript.GetMoney().ToString();
+        return;
+      }
+      //1. it is a tie end  -------------------------------------------------------------------------------
+
+      //2. dealer hast better begin----------------------------------------------------------------------------
+      if ((dealerScript.handValue > playerScript.handValue) && dealerScript.handValue <=21)
+      {
+        loseSnd.Play();
+        mainText.enabled = true;
+        mainText.color = new Color(255, 0, 0); //red #FF0000
+        mainText.text = loseText; // "You Lose!";
+        playerScript.AdjustMoney(-pot /2 );
+        cashText.text = "€ " + playerScript.GetMoney().ToString();
+        return;
+      }
+      //2. dealer hast better end  ----------------------------------------------------------------------------
+
+      //3. dealer busted begin ----------------------------------------------------------------------------
+      if (dealerScript.handValue >21)
+      {
+        harpupSnd.Play();
+        mainText.enabled = true;
+        mainText.color = new Color(0, 255, 0);  //green
+        mainText.text = winText;                //"You win";
+        playerScript.AdjustMoney(+40);
+        cashText.text = "€ " + playerScript.GetMoney().ToString();
+      }
+      //3.dealer busted end ----------------------------------------------------------------------------
+    }
   }  
 
   //check for winner and loser, hand is over
@@ -184,7 +232,7 @@ public class GameManager : MonoBehaviour
     // check for tie, return bets
     else if(playerScript.handValue == dealerScript.handValue)
     {
-      mainText.text = "Push, bets returned";
+      mainText.text = tieText;          // "Push, bets returned";
       playerScript.AdjustMoney(pot / 2);
       return;
     }
