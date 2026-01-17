@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using UnityEngine;
 
 public class DeckScript : MonoBehaviour
@@ -11,7 +12,7 @@ public class DeckScript : MonoBehaviour
     GetCardValues();
   }
 
-  void GetCardValues()
+   void GetCardValues()
   {
     int num = 0;
     // Loop to assign values to the cards
@@ -31,22 +32,30 @@ public class DeckScript : MonoBehaviour
   }
 
   public void Shuffle()
-  {
-    // Standard array data swapping technique
+  { //Fisher / Yastes Algorythm
     for (int i = cardSprites.Length - 1; i > 0; --i)
     {
       int j = Mathf.FloorToInt(Random.Range(0.0f, 1.0f) * cardSprites.Length - 1) + 1;
       //int rndNumber = Random.Range(1, 53); //alternativ
 
+      //Sprite face = variable name.It will store one card image.
       Sprite face = cardSprites[i];
       cardSprites[i] = cardSprites[j];
-
       cardSprites[j] = face;
       //check if tuples work
 
       int value = cardValues[i];
       cardValues[i] = cardValues[j];
       cardValues[j] = value;
+    }
+    currentIndex = 1;
+  }
+
+  public void RestoreDeck() //restore like it was 1st init
+  {
+    for (int i = cardSprites.Length - 1; i > 0; --i)
+    {
+      cardSprites[i] = cardSprites[i]; //this will return the original array, deactivte later
     }
     currentIndex = 1;
   }

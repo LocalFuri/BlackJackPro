@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 8530036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3199997, y: 3.23, z: 0}
+  m_LocalPosition: {x: 4.71, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -458,7 +458,7 @@ Transform:
   m_GameObject: {fileID: 35200067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.82, y: -2.38, z: 0}
+  m_LocalPosition: {x: 1.1199999, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -769,7 +769,7 @@ Transform:
   m_GameObject: {fileID: 83840599}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.32, y: -2.38, z: 0}
+  m_LocalPosition: {x: -0.33000004, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -995,7 +995,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: A d d,  as  n e e d e d
+  m_Text: 
 --- !u!222 &133577972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1239,7 +1239,7 @@ Transform:
   m_GameObject: {fileID: 233164350}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84, y: -0.41999996, z: 0}
+  m_LocalPosition: {x: 3.96, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1999,7 +1999,7 @@ Transform:
   m_GameObject: {fileID: 391989904}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.65999985, y: -2.38, z: 0}
+  m_LocalPosition: {x: -3.1100001, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2285,8 +2285,10 @@ MonoBehaviour:
   hitBtn: {fileID: 988823148}
   standBtn: {fileID: 1504421572}
   betBtn: {fileID: 1600100896}
+  cardSprites: []
   playerBust: 0
   cardIndex: 0
+  cardOffset: 0
   playerScript: {fileID: 358385193}
   dealerScript: {fileID: 441662488}
   scoreText: {fileID: 1439748886}
@@ -2417,7 +2419,7 @@ Transform:
   m_GameObject: {fileID: 801125314}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.65999985, y: 3.23, z: 0}
+  m_LocalPosition: {x: 2.12, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2631,6 +2633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HoverImageChange
   normalSprite: {fileID: 21300000, guid: 2ff65aea1cb1bb14495981580f8c2a18, type: 3}
   hoverSprite: {fileID: 7646275642059952429, guid: c3d32ee127961bf4095c1bbb21a1ab5d, type: 3}
+  dealBtn: {fileID: 0}
 --- !u!1 &1031287428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,7 +2740,7 @@ Transform:
   m_GameObject: {fileID: 1039476853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84000015, y: 3.23, z: 0}
+  m_LocalPosition: {x: 3.42, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2852,7 +2855,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061918003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2912,7 +2915,7 @@ Transform:
   m_GameObject: {fileID: 1061918003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.28, y: 2.94, z: 0}
+  m_LocalPosition: {x: -5.36, y: 1.061, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3020,7 +3023,7 @@ Transform:
   m_GameObject: {fileID: 1090854980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84000015, y: 1.27, z: 0}
+  m_LocalPosition: {x: -1.86, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3124,7 +3127,7 @@ Transform:
   m_GameObject: {fileID: 1132580055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.32, y: -0.41999996, z: 0}
+  m_LocalPosition: {x: 5.4, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3228,7 +3231,7 @@ Transform:
   m_GameObject: {fileID: 1157062007}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8199997, y: 1.27, z: 0}
+  m_LocalPosition: {x: 0.82, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3390,7 +3393,7 @@ Transform:
   m_GameObject: {fileID: 1242075365}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.28, y: 1.05, z: 0}
+  m_LocalPosition: {x: -7.51, y: 1.05, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3593,7 +3596,7 @@ Transform:
   m_GameObject: {fileID: 1313776015}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.65999985, y: -0.41999996, z: 0}
+  m_LocalPosition: {x: 2.55, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3776,7 +3779,7 @@ Transform:
   m_GameObject: {fileID: 1428622357}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3199997, y: 1.27, z: 0}
+  m_LocalPosition: {x: -0.55, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4032,7 +4035,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498518262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4092,7 +4095,7 @@ Transform:
   m_GameObject: {fileID: 1498518262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.78, y: -1.3, z: 0}
+  m_LocalPosition: {x: -5.9, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4248,6 +4251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HoverImageChange
   normalSprite: {fileID: 21300000, guid: 2ff65aea1cb1bb14495981580f8c2a18, type: 3}
   hoverSprite: {fileID: 7646275642059952429, guid: c3d32ee127961bf4095c1bbb21a1ab5d, type: 3}
+  dealBtn: {fileID: 0}
 --- !u!1 &1600100894
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,7 +4400,7 @@ Transform:
   m_GameObject: {fileID: 1608374163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.78, y: 1.71, z: 0}
+  m_LocalPosition: {x: -5.863, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4409,7 +4413,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608374163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4629,7 +4633,7 @@ Transform:
   m_GameObject: {fileID: 1654218412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84, y: -2.38, z: 0}
+  m_LocalPosition: {x: -1.7300001, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4833,7 +4837,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689466400}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4893,7 +4897,7 @@ Transform:
   m_GameObject: {fileID: 1689466400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.425, y: -1.3, z: 0}
+  m_LocalPosition: {x: -4.52, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5133,7 +5137,7 @@ Transform:
   m_GameObject: {fileID: 1869960581}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.65999985, y: 1.2700002, z: 0}
+  m_LocalPosition: {x: -3.2, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5237,7 +5241,7 @@ Transform:
   m_GameObject: {fileID: 1893951482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8199997, y: 3.23, z: 0}
+  m_LocalPosition: {x: 6.02, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5452,7 +5456,7 @@ Transform:
   m_GameObject: {fileID: 1937846965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.425, y: 1.71, z: 0}
+  m_LocalPosition: {x: -4.53, y: 1.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5478,7 +5482,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937846965}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5678,6 +5682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HoverImageChange
   normalSprite: {fileID: 21300000, guid: 2ff65aea1cb1bb14495981580f8c2a18, type: 3}
   hoverSprite: {fileID: 7646275642059952429, guid: c3d32ee127961bf4095c1bbb21a1ab5d, type: 3}
+  dealBtn: {fileID: 0}
 --- !u!1 &2129079235
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,7 +5710,7 @@ Transform:
   m_GameObject: {fileID: 2129079235}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.82, y: -0.41999996, z: 0}
+  m_LocalPosition: {x: 6.77, y: -0.66, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []

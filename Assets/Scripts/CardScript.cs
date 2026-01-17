@@ -1,7 +1,8 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
-
 public class CardScript : MonoBehaviour
 {
+
 
   // Value of card, 2 of clubs = 2, etc
   public int value = 0; //Stores the card’s Blackjack value

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -34,7 +35,10 @@ public class PlayerScript : MonoBehaviour
   public int GetCard()
   {
     // Get a card, use deal card to assign sprite and value to card on table
+    
     int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent<CardScript>());
+
+
     // Show card on game screen
     hand[cardIndex].GetComponent<Renderer>().enabled = true;
 
@@ -51,7 +55,6 @@ public class PlayerScript : MonoBehaviour
     AceCheck();
     cardIndex++ ;
 
-    Debug.Log(handValue);
     return handValue;
   }
 
@@ -93,12 +96,15 @@ public class PlayerScript : MonoBehaviour
  
   public void ResetHand()
   {
-    
+
     //UnityEditor.EditorApplication.isPlaying = false;
     //return;
+
+    //Debug.Log(hand.Length);
+
     for (int i = 0; i < hand.Length; i++) //=11
     {
-     //hand[i].GetComponent<CardScript>().ResetCard(); //what good for????????
+     hand[i].GetComponent<CardScript>().ResetCard(); //what good for????????
      
       //if false you will not see any card!
       hand[i].GetComponent<Renderer>().enabled = false; //will hide: Card1 to Hit9 =11 cards
