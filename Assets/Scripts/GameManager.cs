@@ -20,9 +20,13 @@ public class GameManager : MonoBehaviour
 
   public bool playerBust = false;
   private int standClicks = 0;
-  public int cardIndex = 0;
+  //public int cardIndex = 0;
   public int cardOffset = 0; //use to rig dealers score
-  private float cardDelaySnd = 0.227f; //audacity =0,227 got to adjust todo
+  //private float cardDelaySnd = 0.066f; //audacity =0,227 got to adjust todo
+  private float cardDelaySnd = 0.20f; //audacity =0,227 got to adjust todo
+
+
+  //private float cardDelaySnd = 0.093f; //audacity =0,227 got to adjust todo
 
   private string tieText    = "Push, Bets returned!";
   private string loseText   = "You Lose!";
@@ -40,7 +44,7 @@ public class GameManager : MonoBehaviour
   public Text cashText;
   public Text mainText;
   public Text standBtnText;
-  public AudioSource card1DealSnd, loseSnd, tieSnd, harpupSnd;
+  public AudioSource card1DealSnd, loseSnd, tieSnd, harpupSnd,blackJackSnd;
 
   // Card hiding dealer's 2nd card
   public GameObject hideCard;
@@ -52,14 +56,16 @@ public class GameManager : MonoBehaviour
   {
     dealBtn. onClick.AddListener(DealClicked);
     hitBtn.  onClick.AddListener(HitClicked);
-    standBtn.onClick.AddListener(StandClicked);
+    standBtn.onClick.AddListener(HitDealer);
     betBtn.  onClick.AddListener(BetClicked);
   }
 
   private void DealClicked() //mark2
   {
-    //Sprite face = cardSprites[52]; //dunno ?????????????????????
-    hideCard.GetComponent<Renderer>().enabled = false; //graphic UI object special handling
+    //hideCard.GetComponent<Renderer>().enabled = false; //graphic UI object special handling
+    hideCard.GetComponent<Renderer>().enabled = true; //graphic UI object special handling ?????????
+
+
     mainText.text =""; // reset: win, lose, tie
 
     playerScript.ResetHand(); //mandatory after each round
@@ -74,6 +80,7 @@ public class GameManager : MonoBehaviour
     playerScript.StartHand();
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show player 1st card value
     StartCoroutine(CardDelay());
+
     //Player 1 cards end ------------------------------------------------------------------------
 
     // enable do hide one of the dealers cards
@@ -89,7 +96,29 @@ public class GameManager : MonoBehaviour
     betsText.text ="€ " + pot.ToString();
     playerScript.AdjustMoney(-20);
     cashText.text ="€ " +playerScript.GetMoney().ToString();
+
+
+    Debug.Log("Player :" + playerScript.handValue);
+    Debug.Log("Dealer :" + dealerScript.handValue);
+
+
+    //6. player has a natural Blackjack, Dealer has not begin ---------------------------------------
+    if (playerScript.handValue == 21 && dealerScript.handValue != 21 && playerScript.cardIndex == 2)
+    {
+      Debug.Log("6. player has a natural Blackjack, Dealer has not");
+      blackJackSnd.Play();
+      mainText.color = new Color(255, 0, 255); //red #FF0000
+      mainText.text = "BLACK JACK!";
+      playerScript.AdjustMoney(+60);
+    }
+    //6. player has a natural Blackjack, Dealer has not end ---------------------------------------
+
   }
+
+
+
+
+
 
   private IEnumerator CardDelay() //it only works this way
   {
@@ -101,25 +130,53 @@ public class GameManager : MonoBehaviour
       dealerScript.StartHand();
       dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString(); //show player 1st card value
       card1DealSnd.Play();
+      yield return null;
 
       yield return new WaitForSeconds(cardDelaySnd + 0.0f); // you can extend length +0.2f)
       playerScript.StartHand();
       scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show player 1st card value
       card1DealSnd.Play();
+      yield return null;
 
       yield return new WaitForSeconds(cardDelaySnd + 0.0f); // you can extend length +0.2f)
       dealerScript.StartHand();
       dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString(); //show player 1st card value
       card1DealSnd.Play();
+
+      // IMPORTANT: wait a frame so score updates
+      yield return null;
+
+      //Debug.Log(playerScript.cardIndex);
     }
+
+    PlayerBlackJack(); //check if player got natural Blackjack
   }
 
-  
+  public void PlayerBlackJack()
+  {
+    Debug.Log("from Ienumerator");
+    Debug.Log("Player :" + playerScript.handValue);
+    Debug.Log("Dealer :" + dealerScript.handValue);
+
+    //6. player has a natural Blackjack, Dealer has not begin ---------------------------------------
+    if (playerScript.handValue == 21 && dealerScript.handValue != 21)
+    {
+      Debug.Log("6. player has a natural Blackjack, Dealer has not");
+      blackJackSnd.Play();
+      mainText.color = new Color(255, 0, 255); //red #FF0000
+      mainText.text = "BLACK JACK!";
+      playerScript.AdjustMoney(+60);
+    }
+    //6. player has a natural Blackjack, Dealer has not end ---------------------------------------
+  }
+
+
   public void HitClicked()
   {
     card1DealSnd.Play();
     playerScript.StartHand();
     scoreText.text = "Hand: " + playerScript.handValue.ToString(); //show players next card
+    Debug.Log(playerScript.cardIndex);
 
     if (playerScript.handValue > 21)  //player busted
     {
@@ -130,29 +187,56 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  
-  private void StandClicked()
-  {
-     HitDealer();
-  }
-
-  //HitDealer begin *****************************************************************************************
-  private void HitDealer()
+  private IEnumerator DealerCardDelay() //it only works this way
   {
     while (dealerScript.handValue < 17)
     {
+      card1DealSnd.Play();
       dealerScript.GetCard();
+
+      /*
+      if (dealerScript.handValue >=17)
+      {
+        dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
+        Debug.Log("IEnumerator DealerCardDelay =>exit cause >=17 ");
+        yield break;  // stops the coroutine immediately
+      }
+      */
+      // IMPORTANT: wait a frame so score updates
+      yield return null;
+
       dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
+      yield return new WaitForSeconds(cardDelaySnd + 0F);
     }
+    DetermineWinner();
+  }
 
-    cardOffset = 0; //rig deales score
-    dealerScript.handValue = dealerScript.handValue + cardOffset; //use for testing
-    dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
+  private void DetermineWinner()
+  {
+    Debug.Log("from Ienumerator");
+    Debug.Log("Player :" + playerScript.handValue);
+    Debug.Log("Dealer :" + dealerScript.handValue);
 
-    mainText.enabled = true; //show: tie, lose, win
-    //1. it is a tie begin-------------------------------------------------------------------------------
-    if (dealerScript.handValue == playerScript.handValue) //a tie
+
+    //6. player has a natural Blackjack, Dealer has not begin ---------------------------------------
+    if (playerScript.handValue == 21 && dealerScript.handValue != 21 && playerScript.cardIndex == 2)
     {
+      Debug.Log("6. player has a natural Blackjack, Dealer has not");
+      blackJackSnd.Play();
+      mainText.color = new Color(255, 0, 255); //red #FF0000
+      mainText.text = "BLACK JACK!";
+      playerScript.AdjustMoney(+60);
+    }
+    //6. player has a natural Blackjack, Dealer has not end ---------------------------------------
+
+
+    //1. it is a tie begin-------------------------------------------------------------------------------
+    else if (dealerScript.handValue == playerScript.handValue) //a tie
+    {
+      Debug.Log("1. it is a tie");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
       tieSnd.Play();
       mainText.color = new Color(255, 215, 0);  //gold #FFD700
       mainText.text = tieText;                  // "Push, Bets returned";
@@ -160,26 +244,205 @@ public class GameManager : MonoBehaviour
     }
     //1. it is a tie end  -------------------------------------------------------------------------------
 
-    //2. dealer hast better begin----------------------------------------------------------------------------
-    else if ((dealerScript.handValue > playerScript.handValue) && dealerScript.handValue <=21)
+    //2. dealer has better and not busted begin--------------------------------------------------------------
+    else if ((dealerScript.handValue > playerScript.handValue) && dealerScript.handValue < 22)
     {
+      Debug.Log("2. dealer has better and not busted");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
       loseSnd.Play();
       mainText.color = new Color(255, 0, 0); //red #FF0000
       mainText.text = loseText; // "You Lose!";
-      playerScript.AdjustMoney(-pot /2 );
+      playerScript.AdjustMoney(-pot / 2);
     }
-    //2. dealer hast better end  ----------------------------------------------------------------------------
+    //2. dealer has better and not busted begin--------------------------------------------------------------
 
-    //3. dealer busted begin ----------------------------------------------------------------------------
-    else if (dealerScript.handValue > 21)
+    //3. if play has better than dealer and player did not bust begin -------------------------------------------
+    else if ((playerScript.handValue > dealerScript.handValue) && playerScript.handValue <= 21)
     {
+
+      Debug.Log("3. if play has better than dealer and player did not bust");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
       harpupSnd.Play();
       mainText.color = new Color(0, 255, 0);  //green
       mainText.text = winText;                //"You win";
       playerScript.AdjustMoney(+40);
     }
-    //3.dealer busted end ----------------------------------------------------------------------------
+    //3. if play has better than deal and play did not bust begin -------------------------------------------
+
+    //4. dealer busted begin ----------------------------------------------------------------------------
+    else if (dealerScript.handValue > 21)
+    {
+      Debug.Log("4. dealer busted");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
+      harpupSnd.Play();
+      mainText.color = new Color(0, 255, 0);  //green
+      mainText.text = winText;                //"You win";
+      playerScript.AdjustMoney(+40);
+    }
+    //4.dealer busted end ----------------------------------------------------------------------------
+
+    //5. player busted begin ----------------------------------------------------------------------------
+    else if (playerScript.handValue > 21)
+    {
+      Debug.Log("5. player busted");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
+      loseSnd.Play();
+      mainText.color = new Color(255, 0, 0); //red #FF0000
+      mainText.text = loseText; // "You Lose!";
+      playerScript.AdjustMoney(-pot / 2);
+    }
+    //5. player busted end ----------------------------------------------------------------------------
+
+    else
+    {
+      mainText.color = new Color(255, 0, 0); //red #FF0000
+      mainText.text = "Unfixed Error";
+      Debug.Log("Dealer: " + dealerScript.handValue);
+      Debug.Log("Player: " + playerScript.handValue);
+    }
+
+
     cashText.text = "€ " + playerScript.GetMoney().ToString();
+
+    //adjust butts begin ------------------------------------
+    dealBtn.gameObject.SetActive(true);
+    hitBtn.gameObject.SetActive(false);
+    standBtn.gameObject.SetActive(false);
+    //adjust butts end ------------------------------------
+
+    //    dealBtn.image.sprite = normalSprite;
+    //    dealBtn.image.sprite = normalSprite;
+    //dealBtn.SetNormal();
+
+    //dealButtonController.SetNormal(); // 
+  }
+
+
+  //HitDealer begin *****************************************************************************************
+  private void HitDealer()
+  {
+    StartCoroutine(DealerCardDelay());
+
+    /*
+    cardOffset = 0; //rig deales score
+    dealerScript.handValue = dealerScript.handValue + cardOffset; //use for testing
+    dealerScoreText.text = "Dealer Hand: " + dealerScript.handValue.ToString();
+    */
+
+    return;
+    Debug.Log(dealerScript.handValue);
+    mainText.enabled = true; //show: tie, lose, win
+
+    //6. player has a natural Blackjack, Dealer has not begin ---------------------------------------
+    if (playerScript.handValue == 21 && dealerScript.handValue != 21 && playerScript.cardIndex == 2)
+    {
+      Debug.Log("6. player has a natural Blackjack, Dealer has not");
+      blackJackSnd.Play();
+      mainText.color = new Color(255, 0, 255); //red #FF0000
+      mainText.text = "BLACK JACK!";
+      playerScript.AdjustMoney(+60);
+    }
+    //6. player has a natural Blackjack, Dealer has not end ---------------------------------------
+
+
+    //1. it is a tie begin-------------------------------------------------------------------------------
+    else if (dealerScript.handValue == playerScript.handValue) //a tie
+    {
+      Debug.Log("1. it is a tie");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
+      tieSnd.Play();
+      mainText.color = new Color(255, 215, 0);  //gold #FFD700
+      mainText.text = tieText;                  // "Push, Bets returned";
+      playerScript.AdjustMoney(+20);
+    }
+    //1. it is a tie end  -------------------------------------------------------------------------------
+
+    //2. dealer has better and not busted begin--------------------------------------------------------------
+    else if ((dealerScript.handValue > playerScript.handValue) && dealerScript.handValue <22)
+    {
+      Debug.Log("2. dealer has better and not busted");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
+      loseSnd.Play();
+      mainText.color = new Color(255, 0, 0); //red #FF0000
+      mainText.text = loseText; // "You Lose!";
+      playerScript.AdjustMoney(-pot /2 );
+    }
+    //2. dealer has better and not busted begin--------------------------------------------------------------
+
+    //3. if play has better than dealer and player did not bust begin -------------------------------------------
+    else if ((playerScript.handValue > dealerScript.handValue) && playerScript.handValue <= 21)
+    {
+
+      Debug.Log("3. if play has better than dealer and player did not bust");
+      Debug.Log("Player :" +playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+      harpupSnd.Play();
+      mainText.color = new Color(0, 255, 0);  //green
+      mainText.text = winText;                //"You win";
+      playerScript.AdjustMoney(+40);
+    }
+    //3. if play has better than deal and play did not bust begin -------------------------------------------
+    
+    //4. dealer busted begin ----------------------------------------------------------------------------
+    else if (dealerScript.handValue >21)
+    {
+      Debug.Log("4. dealer busted");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
+      harpupSnd.Play();
+      mainText.color = new Color(0, 255, 0);  //green
+      mainText.text = winText;                //"You win";
+      playerScript.AdjustMoney(+40);
+    }
+    //4.dealer busted end ----------------------------------------------------------------------------
+
+    //5. player busted begin ----------------------------------------------------------------------------
+    else if (playerScript.handValue > 21)
+    {
+      Debug.Log("5. player busted");
+      Debug.Log("Player :" + playerScript.handValue);
+      Debug.Log("Dealer :" + dealerScript.handValue);
+
+      loseSnd.Play();
+      mainText.color = new Color(255, 0, 0); //red #FF0000
+      mainText.text = loseText; // "You Lose!";
+      playerScript.AdjustMoney(-pot / 2);
+    }
+    //5. player busted end ----------------------------------------------------------------------------
+
+    //7. dealer has a natural Blackjack, player has not begin ---------------------------------------
+    if (playerScript.handValue == 21 && dealerScript.handValue != 21 && playerScript.cardIndex == 2)
+    {
+      Debug.Log("7. dealer has a natural Blackjack, player has not");
+      loseSnd.Play();
+      mainText.color = new Color(255, 0, 0); //red #FF0000
+      mainText.text = loseText; // "You Lose!";
+      playerScript.AdjustMoney(-pot / 2);
+    }
+    //7. dealer has a natural Blackjack, player has not end ---------------------------------------
+
+    else
+    {
+      mainText.color = new Color(255, 0, 0); //red #FF0000
+      mainText.text = "Unfixed Error";
+      Debug.Log("Dealer: "  +dealerScript.handValue);
+      Debug.Log("Player: "  + playerScript.handValue);
+    }
+
+
+      cashText.text = "€ " + playerScript.GetMoney().ToString();
 
     //adjust butts begin ------------------------------------
     dealBtn.gameObject  .SetActive(true);
